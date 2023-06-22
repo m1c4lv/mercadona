@@ -4,7 +4,8 @@
   "scripts": {
     "lint": "eslint .  --ext .js",
     "lint-fix": "eslint --fix .  --ext .js",
-    "start": "node app.js"
+    "start": "node app.js",
+    "test": "echo \"No hay pruebas definidas\"" 
   },
   "dependencies": {},
   "devDependencies": {
