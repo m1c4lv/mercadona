@@ -2,8 +2,8 @@
   "name": "hola-mundo",
   "version": "1.0.0",
   "scripts": {
-    "lint": "eslint .  --ext .js"
-    "lint-fix": "eslint --fix .  --ext .js"
+    "lint": "eslint .  --ext .js",
+    "lint-fix": "eslint --fix .  --ext .js",
     "start": "node app.js"
   }
 }
