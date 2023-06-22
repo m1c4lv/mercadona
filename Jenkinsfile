@@ -34,6 +34,7 @@ pipeline {
 		dir("mercadona") {
                 	sh('npm install')
                 	sh('yes | npm install eslint --save-dev')  // Instalación linter
+			sh('yes | npm install --save-dev eslint-plugin-jest')
 		}
             }
 	}
