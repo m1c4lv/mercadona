@@ -8,9 +8,9 @@
   },
   "dependencies": {},
   "devDependencies": {
-    "eslint-config-standard": "^8.43.0",
-    "eslint-plugin-import": ">=2.0.0",
-    "eslint-plugin-node": ">=11.0.0",
-    "eslint-plugin-promise": ">=5.0.0"
+    "eslint-config-standard": "^7.12.1",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^4.2.1"
   }
 }
