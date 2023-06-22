@@ -24,7 +24,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git 'https://github.com/m1c4lv/mercadona.git'
+                sh('git clone https://github.com/m1c4lv/mercadona.git')
             }
         }
 		
