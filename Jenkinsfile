@@ -79,6 +79,7 @@ pipeline {
 		
 		stage('Despliegue en kubernetes en un namespace') {
             steps {
+		    echo 'Simulando despliegue en kubernetes'
                 //withCredentials([file(credentialsId: 'kubeconfig', variable: 'kubeconfig')]) {  // Secreto de tipo file con el kubeconfig
 					//sh '''            
 						//# Crear despliegue en el Namespace
