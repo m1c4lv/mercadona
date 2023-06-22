@@ -36,7 +36,7 @@ pipeline {
                 	sh('yes | npm install eslint')  // Instalación linter
 		}
             }
-		}
+	}
 
 // Documentación de linter en node: https://mojitocoder.medium.com/how-to-add-code-linting-for-a-node-js-project-b210d8759cd5
 
@@ -48,7 +48,7 @@ pipeline {
                 	sh('cp my-eslintrc.js .eslintrc.js')
 		}
             }
-		}
+	}
 		
 	stage('Linteo') {
             steps {
@@ -64,6 +64,7 @@ pipeline {
                 	sh 'npm test'
 		}
             }
+	}
 		
 	stage('Build de la imagen Docker') {
             steps {
