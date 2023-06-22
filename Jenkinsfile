@@ -42,9 +42,11 @@ pipeline {
 
         stage('Inicializar linter') {                // Configuración del linter de node
             steps {
-                sh('./node_modules/.bin/eslint --init')
-                sh('rm -rf .eslintrc.js')
-                sh('cp my-eslintrc.js .eslintrc.js')
+		dir("mercadona") {
+                	sh('./node_modules/.bin/eslint --init')
+                	sh('rm -rf .eslintrc.js')
+                	sh('cp my-eslintrc.js .eslintrc.js')
+		}
             }
 		}
 		
