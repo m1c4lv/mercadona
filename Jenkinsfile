@@ -55,7 +55,7 @@ pipeline {
             steps {
 		dir("mercadona") {    
 			sh('npm run lint')
-			sh('npm run lint-fix')
+			//sh('npm run lint-fix')
 		}
             }
 	}
