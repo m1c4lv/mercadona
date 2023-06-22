@@ -8,13 +8,13 @@ pipeline {
     parameters {
 
       string(
-        name: "nodejs-holamundo",
+        name: "IMAGE_NAME",
         defaultValue: "" ,
         description: "Docker image name",
       )
 
       string(
-        name: "v1",
+        name: "TAG",
         defaultValue: "" ,
         description: "Docker image TAG",
       )
