@@ -5,5 +5,12 @@
     "lint": "eslint .  --ext .js",
     "lint-fix": "eslint --fix .  --ext .js",
     "start": "node app.js"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "eslint-config-standard": "^16.0.3",
+    "eslint-plugin-import": "^2.25.3",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^5.1.0"
   }
 }
