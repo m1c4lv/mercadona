@@ -50,35 +50,42 @@ pipeline {
             }
 		}
 		
-		stage('Linteo') {
+	stage('Linteo') {
             steps {
-			    sh('npm run lint')
-            }
+		dir("mercadona") {    
+			sh('npm run lint')
 		}
-		
-		stage('Test') {
-            steps {
-                sh 'npm test'
             }
-		}
+	}
 		
-		stage('Build de la imagen Docker') {
+	stage('Test') {
             steps {
-                script {
-					def dockerImage = docker.build("m1c4lv/${IMAGE_NAME}:${TAG}", '.')
-				}	
+		dir("mercadona") {
+                	sh 'npm test'
+		}
             }
-		}
 		
-		stage('Subida al registry') {
+	stage('Build de la imagen Docker') {
             steps {
-                script {
-					docker.withRegistry('https://hub.docker.com', 'dockerhubcredentials') {
-						dockerImage.push()
-					}
-				}
+		dir("mercadona") {
+                	script {
+				def dockerImage = docker.build("m1c4lv/${IMAGE_NAME}:${TAG}", '.')
 			}
 		}
+            }
+	}
+		
+	stage('Subida al registry') {
+            steps {
+		dir("mercadona") {
+                	script {
+				docker.withRegistry('https://hub.docker.com', 'dockerhubcredentials') {
+				dockerImage.push()
+					}
+				}
+		}
+		}
+	}
 // Supongo que el namespace está ya creado, si no hay que añadir el paso de crearlo primero
 // Es necesario crear el secreto kubeconfig con el contenido del fichero .kube/config
 		
