@@ -71,6 +71,7 @@ pipeline {
 	stage('Build de la imagen Docker') {
             steps {
 		dir("mercadona") {
+			sh('docker version')
                 	script {
 				def dockerImage = docker.build("m1c4lv/${IMAGE_NAME}:${TAG}", '.')
 			}
