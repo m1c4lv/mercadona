@@ -84,7 +84,7 @@ pipeline {
 		dir("mercadona") {
                 	script {
 				docker.withRegistry('https://hub.docker.com', 'dockerhubcredentials') {
-				dockerImage.push()
+				dockerImage.push("m1c4lv/${IMAGE_NAME}:${TAG}")
 					}
 				}
 		}
