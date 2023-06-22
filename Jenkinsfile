@@ -30,8 +30,10 @@ pipeline {
 		
 		stage('Instalación de dependencias') {
             steps {
-                sh('npm install')
-                sh('yes | npm install eslint')  // Instalación linter
+		dir("mercadona") {
+                	sh('npm install')
+                	sh('yes | npm install eslint')  // Instalación linter
+		}
             }
 		}
 
