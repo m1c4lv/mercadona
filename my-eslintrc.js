@@ -13,6 +13,11 @@ module.exports = {
   parserOptions: {
     ecmaVersion: 12
   },
+  settings: {
+    jest: {
+      version: '8.43.0'
+    }
+  },
   rules: {
   }
 }
