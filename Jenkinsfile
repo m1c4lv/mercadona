@@ -24,11 +24,12 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
+		sh('rm -rf mercadona')
                 sh('git clone https://github.com/m1c4lv/mercadona.git')
             }
         }
 		
-		stage('Instalación de dependencias') {
+	stage('Instalación de dependencias') {
             steps {
 		dir("mercadona") {
                 	sh('npm install')
