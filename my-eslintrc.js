@@ -21,4 +21,4 @@ module.exports = {
   rules: {
     // Reglas personalizadas, si las tienes
   }
-};
+}
