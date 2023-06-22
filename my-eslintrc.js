@@ -8,7 +8,7 @@ module.exports = {
     plugins: ['jest'],
     extends: [
       'standard',
-      'plugin:jest/recommended'
+      //'plugin:jest/recommended'
     ],
     parserOptions: {
       ecmaVersion: 12
